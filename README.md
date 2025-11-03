@@ -42,4 +42,5 @@ npx remark . --ext md --output
 
 ## TODO
 
-How to use from outside directory?
+- [ ] How to use from outside directory?
+- [ ] Make RAM usage comparison on obsidian
