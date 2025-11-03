@@ -39,3 +39,7 @@ npx remark . --ext md --output
 [Markdown cheatsheet for YouTube](https://gist.github.com/bitsurgeon/acd769ae3236c48a433e0acb11784c2e)
 
 [AST explorer](https://astexplorer.net/)
+
+## TODO
+
+How to use from outside directory?
