@@ -19,7 +19,7 @@ To:
 Separate output file
 
 ```shell
-npx remark input.md -o output.md
+npx remark-cli input.md -o output.md
 ```
 
 In place
@@ -31,7 +31,7 @@ npx remark-cli input.md --output
 Multiple files or folders
 
 ```shell
-npx remark . --ext md --output
+npx remark-cli . --ext md --output
 ```
 
 ## Resources
@@ -42,5 +42,6 @@ npx remark . --ext md --output
 
 ## TODO
 
+- [x] Fix obsidian links
 - [ ] How to use from outside directory?
 - [ ] Make RAM usage comparison on obsidian

@@ -1,6 +1,7 @@
 import remarkParse from "remark-parse";
 import remarkStringify from "remark-stringify";
-import { visit } from "unist-util-visit";
+import {visit} from "unist-util-visit";
+import wikiLinkPlugin from "remark-wiki-link";
 
 const youtubeImageToLinkWithPreview = () => {
   return function (tree) {
@@ -15,16 +16,9 @@ const youtubeImageToLinkWithPreview = () => {
 
         // Replace the image node with a link node containing the image
         parent.children[index] = {
-          type: "link",
-          url: youtubeUrl,
-          title,
-          children: [
-            {
-              type: "image",
-              url: imageUrl,
-              alt: title,
-            },
-          ],
+          type: "link", url: youtubeUrl, title, children: [{
+            type: "image", url: imageUrl, alt: title,
+          }],
         };
       }
     });
@@ -32,5 +26,5 @@ const youtubeImageToLinkWithPreview = () => {
 };
 
 export default {
-  plugins: [remarkParse, remarkStringify, youtubeImageToLinkWithPreview],
+  plugins: [remarkParse, wikiLinkPlugin, remarkStringify, youtubeImageToLinkWithPreview],
 };
