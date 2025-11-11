@@ -43,5 +43,6 @@ npx remark-cli . --ext md --output
 ## TODO
 
 - [x] Fix obsidian links
+- [ ] support low resolution in case max is not exist
 - [ ] How to use from outside directory?
 - [ ] Make RAM usage comparison on obsidian
